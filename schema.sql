@@ -1,6 +1,17 @@
 
 CREATE DATABASE nfl_historic;
 
+
+CREATE TABLE baseline (
+    home_score  INT NOT NULL,
+    away_score  INT NOT NULL,
+    final_float  FLOAT NOT NULL DEFAULT 0,
+    first_float  FLOAT NOT NULL DEFAULT 0,
+    second_float  FLOAT NOT NULL DEFAULT 0,
+    third_float  FLOAT NOT NULL DEFAULT 0,
+    fourth_float  FLOAT NOT NULL DEFAULT 0
+);
+
 CREATE TABLE games (
     id                  SERIAL PRIMARY KEY,
     home_team           VARCHAR(100) NOT NULL,
